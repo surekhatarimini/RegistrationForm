@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration</title>
+    <!-- Make sure this path correctly points to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Vendor Registration</h1>
+        </div>
+        
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Vendor Name" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="Contact Person" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+            
+            <div class="form-group">
+                <select required>
+                    <option value="" disabled selected>Select Vendor Type</option>
+                    <option value="food">Food</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="services">Services</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <textarea placeholder="Address" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="Tax ID" required>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: #000">Payment Method</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input  type="radio" id="bank" name="payment" value="bank" checked>
+                        <label  style="color: #000">Bank Transfer</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="cheque" name="payment" value="cheque">
+                        <label style="color: #000"for="cheque">Cheque</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label style="color: #000">Registration Date</label>
+                <div class="date-picker">
+                    <input type="date" required>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="active" checked>
+                <label style="color: #000"for="active">Active</label>
+            </div>
+            
+            <button type="submit" class="btn">Register Vendor</button>
+        </form>
+    </div>
+</body>
+</html>
