@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Registration</title>
-    <!-- Make sure this path correctly points to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <h1>Vendor Registration</h1>
         </div>
-        
-        <form>
+
+        <form id="vendorForm">
             <div class="form-group">
-                <input type="text" placeholder="Vendor Name" required>
+                <input type="text" placeholder="Vendor Name" name="vendorName" required>
             </div>
-            
+
             <div class="form-group">
-                <input type="text" placeholder="Contact Person" required>
+                <input type="text" placeholder="Contact Person" name="contactPerson" required>
             </div>
-            
+
             <div class="form-group">
-                <input type="email" placeholder="Email" required>
+                <input type="email" placeholder="Email" name="email" required>
             </div>
-            
+
             <div class="form-group">
-                <input type="tel" placeholder="Phone Number" required>
+                <input type="tel" placeholder="Phone Number" name="phone" required>
             </div>
-            
+
             <div class="form-group">
-                <select required>
+                <select name="category" required>
                     <option value="" disabled selected>Select Vendor Type</option>
                     <option value="food">Food</option>
                     <option value="electronics">Electronics</option>
@@ -40,43 +41,47 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-            
+
             <div class="form-group">
-                <textarea placeholder="Address" required></textarea>
+                <textarea name="address" placeholder="Address" required></textarea>
             </div>
-            
+
             <div class="form-group">
-                <input type="text" placeholder="Tax ID" required>
+                <input type="text" placeholder="Tax ID" name="taxId" required>
             </div>
-            
+
             <div class="form-group">
-                <label style="color: #000">Payment Method</label>
+                <label>Payment Method</label>
                 <div class="radio-group">
                     <div class="radio-option">
-                        <input  type="radio" id="bank" name="payment" value="bank" checked>
-                        <label  style="color: #000">Bank Transfer</label>
+                        <input type="radio" id="bank" name="paymentMethod" value="bank" checked>
+                        <label for="bank">Bank Transfer</label>
                     </div>
                     <div class="radio-option">
-                        <input type="radio" id="cheque" name="payment" value="cheque">
-                        <label style="color: #000"for="cheque">Cheque</label>
+                        <input type="radio" id="cheque" name="paymentMethod" value="cheque">
+                        <label for="cheque">Cheque</label>
                     </div>
                 </div>
             </div>
-            
+
             <div class="form-group">
-                <label style="color: #000">Registration Date</label>
+                <label>Registration Date</label>
                 <div class="date-picker">
-                    <input type="date" required>
+                    <input type="date" name="contractStart" required>
                 </div>
             </div>
-            
+
             <div class="checkbox-group">
-                <input type="checkbox" id="active" checked>
-                <label style="color: #000"for="active">Active</label>
+                <input type="checkbox" id="active" name="isActive" checked>
+                <label for="active">Active</label>
             </div>
-            
+
             <button type="submit" class="btn">Register Vendor</button>
         </form>
     </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
 </body>
+
 </html>
